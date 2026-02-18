@@ -55,7 +55,7 @@
 rm(list = ls())
 
 # ---------------------------------------------------------------------
-# load the required packages
+# load the required packages (if not present, install them) 
 # ---------------------------------------------------------------------
 
 required_packages <- c("betareg", "moments")
