@@ -61,12 +61,16 @@ rm(list = ls())
 # load the required packages (if not present, install them) 
 # ---------------------------------------------------------------------
 
-required_packages <- c("betareg", "moments")
-
-if (!require(pkg, character.only = TRUE)) {
-  install.packages(pkg)
-  library(pkg, character.only = TRUE)
+if (!require("betareg")) {
+  install.packages("betareg")
 }
+library(betareg)
+
+if (!require("moments")) {
+  install.packages("moments")
+}
+library(moments)
+
 
 # ---------------------------------------------------------------------
 # read dataset
@@ -102,7 +106,7 @@ c(
    q3       = unname(quantile(x, 0.75)),
    max      = max(x),
    sd       = sdv,
-   cv       = ifelse(m != 0, sdv / m, NA),
+   cv       = ifelse(m != 0, (sdv / m) * 100, NA),
    skewness = moments::skewness(x),
    kurtosis = moments::kurtosis(x)
     )
@@ -113,6 +117,7 @@ cont_vars <- c("IQ", "INCOME", "OPEN", "MUSLIM")
 desc_table <- round(t(sapply(df[cont_vars], desc_continuous)), 4)
 
 print(desc_table, quote = FALSE)
+
 
 # ---------------------------------------------------------------------
 # frequency distributions of dummy variables
