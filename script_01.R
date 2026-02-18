@@ -61,16 +61,12 @@ rm(list = ls())
 # load the required packages (if not present, install them) 
 # ---------------------------------------------------------------------
 
-if (!require("betareg")) {
-  install.packages("betareg")
-}
-library(betareg)
+required_packages <- c("betareg", "moments")
 
-if (!require("moments")) {
-  install.packages("moments")
+if (!require(pkg, character.only = TRUE)) {
+  install.packages(pkg)
+  library(pkg, character.only = TRUE)
 }
-library(moments)
-
 
 # ---------------------------------------------------------------------
 # read dataset
@@ -106,7 +102,7 @@ c(
    q3       = unname(quantile(x, 0.75)),
    max      = max(x),
    sd       = sdv,
-   cv       = ifelse(m != 0, (sdv / m) * 100, NA),
+   cv       = ifelse(m != 0, sdv / m, NA),
    skewness = moments::skewness(x),
    kurtosis = moments::kurtosis(x)
     )
@@ -117,7 +113,6 @@ cont_vars <- c("IQ", "INCOME", "OPEN", "MUSLIM")
 desc_table <- round(t(sapply(df[cont_vars], desc_continuous)), 4)
 
 print(desc_table, quote = FALSE)
-
 
 # ---------------------------------------------------------------------
 # frequency distributions of dummy variables
@@ -205,4 +200,23 @@ plot(df_model$NOGOD, predicted_values,
      xlim = c(0, 0.8),
      ylim = c(0, 0.8))
 
-abline(0, 1) # 45-degree line 
+abline(0, 1) # 45-degree line atheism_gaps <- df_model$NOGOD - predicted_values
+
+# ---------------------------------------------------------------------
+# atheism gaps, unsorted
+# ---------------------------------------------------------------------
+
+gaps_table <- data.frame(
+  Country = df_model$Country,
+  Gap = round(atheism_gaps, 4)
+)
+
+print(gaps_table, row.names = FALSE)
+
+# ---------------------------------------------------------------------
+# atheism gaps, sorted
+# ---------------------------------------------------------------------
+
+gaps_sorted <- gaps_table[order(gaps_table$Gap), ]
+
+print(gaps_sorted, row.names = FALSE)
