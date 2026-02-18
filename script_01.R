@@ -1,5 +1,5 @@
 # =====================================================================
-# Reproducibility Script
+# Reprodutibility Script
 #
 # Article:
 # Atheism and Country-Level Intelligence: Elasticity and Cross-Regional
@@ -7,6 +7,9 @@
 #
 # Journal:
 # Humanities and Social Sciences Communications 
+#
+# Authors:
+# Tatiene C. Souza and Francisco Cribari-Neto 
 #  
 # ---------------------------------------------------------------------
 # Purpose
@@ -16,7 +19,7 @@
 # - Descriptive statistics (Table 1)
 # - Beta regression model fit (Table 2)
 # - Goodness of fit statistics (AIC, BIC, Pseudo R2, Nagelkerke R2)
-# - Plot of observed versus predicted values (Figure 1 (b)))
+# - Plot of observed versus predicted values (Figure 1 (b))
 #
 # ---------------------------------------------------------------------
 # Data
@@ -60,10 +63,8 @@ rm(list = ls())
 
 required_packages <- c("betareg", "moments")
 
-for (pkg in required_packages) {
-  if (!requireNamespace(pkg, quietly = TRUE)) {
-    install.packages(pkg)
-  }
+if (!require(pkg, character.only = TRUE)) {
+  install.packages(pkg)
   library(pkg, character.only = TRUE)
 }
 
@@ -109,7 +110,9 @@ c(
 
 cont_vars <- c("IQ", "INCOME", "OPEN", "MUSLIM")
 
-round(t(sapply(df[cont_vars], desc_continuous)), 4)
+desc_table <- round(t(sapply(df[cont_vars], desc_continuous)), 4)
+
+print(desc_table, quote = FALSE)
 
 # ---------------------------------------------------------------------
 # frequency distributions of dummy variables
