@@ -21,7 +21,7 @@ Replication materials for selected results presented in the article
 
 If you use these materials, please cite the original article:
 
-> Souza, T.C.; Cribari-Neto, F. (2026) "Atheism and Cross-Country National Cognitive Skills: Evidence from a Beta Regression Analysis".
+> Souza, T.C.; Cribari-Neto, F. (2026) "Atheism and cross-country national cognitive skills: Evidence from a beta regression analysis".
 
 ## Contact
 
