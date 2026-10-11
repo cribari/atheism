@@ -1,4 +1,4 @@
-# Atheism and Country-Level Cognitive Skills
+# Atheism and Cognitive Skills: Beta Regression
 
 Replication materials for selected results presented in the article  
 **"Atheism and Cross-Country National Cognitive Skills: Evidence from a Beta Regression Analysis"**.
