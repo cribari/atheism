@@ -1,4 +1,4 @@
-# Atheism and Country-Level Intelligence
+# Atheism and Country-Level Cognitive Skills
 
 Replication materials for selected results presented in the article  
 **"Atheism and Cross-Country National Cognitive Skills: Evidence from a Beta Regression Analysis"**.
@@ -7,7 +7,7 @@ Replication materials for selected results presented in the article
 
 | File | Description |
 |------|-------------|
-| `data_atheism.csv` | Dataset with country-level variables on atheism prevalence and intelligence indicators |
+| `data_atheism.csv` | Dataset with country-level variables on atheism prevalence and cognitive skills indicators |
 | `script_01.R` | R script to read the data and reproduce key results from the article |
 
 ## Usage
