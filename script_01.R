@@ -2,11 +2,11 @@
 # Reprodutibility Script
 #
 # Article:
-# Atheism and Country-Level Intelligence: Elasticity and Cross-Regional
-# Variation in Secularization
+# Atheism and Cross-Country National Cognitive Skills: Evidence from a 
+# Beta Regression Analysis
 #
 # Journal:
-# Humanities and Social Sciences Communications 
+# Communications in Statistics – Case Studies and Data Analysis 
 #
 # Authors:
 # Tatiene C. Souza and Francisco Cribari-Neto 
