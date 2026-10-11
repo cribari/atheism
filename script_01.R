@@ -32,7 +32,7 @@
 # NOGOD — proportion of religious disbelievers at the country level
 #
 # Main regressors:
-# IQ          — national intelligence estimate
+# IQ          — country-level cognitive skills expressed on an IQ scale
 # INCOME      — gross national income per capita
 # OPEN        — trade openness (exports + imports as % of GDP)
 # MUSLIM      — percentage Muslim population
