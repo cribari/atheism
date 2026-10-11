@@ -1,5 +1,5 @@
 # =====================================================================
-# Reprodutibility Script
+# Reproducibility Script
 #
 # Article:
 # Atheism and Cross-Country National Cognitive Skills: Evidence from a 
