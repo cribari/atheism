@@ -1,7 +1,7 @@
 # Atheism and Country-Level Intelligence
 
 Replication materials for selected results presented in the article  
-**"Atheism and Country-Level Intelligence: Elasticity and Cross-Regional Variation in Secularization"**.
+**"Atheism and Cross-Country National Cognitive Skills: Evidence from a Beta Regression Analysis"**.
 
 ## Contents
 
@@ -21,7 +21,7 @@ Replication materials for selected results presented in the article
 
 If you use these materials, please cite the original article:
 
-> Souza, T.C.; Cribari-Neto, F. (2026) "Atheism and Country-Level Intelligence: Elasticity and Cross-Regional Variation in Secularization".
+> Souza, T.C.; Cribari-Neto, F. (2026) "Atheism and Cross-Country National Cognitive Skills: Evidence from a Beta Regression Analysis".
 
 ## Contact
 
